@@ -137,10 +137,16 @@ $.get('/map_cities.json', function (latlongs) {
       </form>
       {% endif %}
       <hr> 
+      <div>
+        <a href='{{ airbnb_link }}' button type="button" class="btn btn-primary">take me AirBnB</a> 
+        <p> test paragraph </p>
+      </div>
     </div>
+
     <div class="col-lg-4">
     <div id="map-canvas"></div>
-  </div>    
+    </div> 
+
   </div>
 </div>
 {% endblock %}
