@@ -6,17 +6,6 @@ latlongs = {
       "properties": {
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
-        "city": "Atlanta, Georgia",
-        "code": "ATL",
-        "latitude": 33.747894124738075,
-        "longitude": -84.39130783081055,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
         "city": "Boston, Massachusetts",
         "code": "BOS",
         "latitude": 42.359812384483625, 
@@ -43,28 +32,6 @@ latlongs = {
         "code": "DFW",
         "latitude": 32.77486270272197, 
         "longitude": -96.79710388183594,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Denver, Colorado",
-        "code": "DEN",
-        "latitude": 39.73808234498568, 
-        "longitude": -104.9853515625,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Las Vegas, Nevada",
-        "code": "LAS",
-        "latitude": 36.165042231280346, 
-        "longitude": -115.15525817871092,
       },
     },
     {
@@ -100,39 +67,7 @@ latlongs = {
         "longitude": -122.33413696289064,
       },
     },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Maui, Hawaii",
-        "code": "OGG",
-        "latitude": 20.883192256096645, 
-        "longitude": -156.45767211914062,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Miami, Florida",
-        "code": "MIA",
-        "latitude": 25.768977132280213, 
-        "longitude": -80.19195556640625,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Phoenix, Arizona",
-        "code": "PHX",
-        "latitude": 33.44748488908883, 
-        "longitude": -112.07633972167967,
-      },
-    },
+
     {
       "type": "Feature",
       "properties": {
@@ -171,231 +106,10 @@ latlongs = {
       "properties": {
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
-        "city": "Toronto, Ontario, Canada",
-        "code": "YYZ",
-        "latitude": 43.650981839898684, 
-        "longitude": -79.37347412109375,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Montreal, Quebec, Canada",
-        "code": "YUL",
-        "latitude": 45.508031152686875, 
-        "longitude": -73.55175018310547,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "San Juan, Puerto Rico",
-        "code": "SJU",
-        "latitude": 18.46365294149847, 
-        "longitude": -66.1167526245117,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Montego Bay, Jamaica",
-        "code": "MBJ",
-        "latitude": 18.469840182428346, 
-        "longitude": -77.92362213134766,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Cancun, Mexico",
-        "code": "CUN",
-        "latitude": 21.165203210480364, 
-        "longitude": -86.80847167968749,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Buenos Aires, Argentina",
-        "code": "EZE",
-        "latitude": -34.60778005929918, 
-        "longitude": -58.43559265136718,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Rio de Janeiro, Brazil",
-        "code": "GIG",
-        "latitude": -22.91286328803375, 
-        "longitude": -43.20991516113281,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Lisbon, Portugal",
-        "code": "LIS",
-        "latitude": 38.701587580994214, 
-        "longitude": -9.13238525390625,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Madrid, Spain",
-        "code": "MAD",
-        "latitude": 40.41584861765069, 
-        "longitude": -3.703594207763672,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Paris, France",
-        "code": "CDG",
-        "latitude": 48.855002219371706, 
-        "longitude": 2.3507308959960938,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Dublin",
-        "code": "DUB",
-        "latitude": 53.34399288223422, 
-        "longitude": -6.26220703125,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
-        "title": "Rome",
-        "code": "FCO",
-        "latitude": 41.88592102814744, 
-        "longitude": 12.480468749999998,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Amsterdam",
-        "code": "AMS",
-        "latitude": 52.348763181988105, 
-        "longitude": 4.9053955078125,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Copenhagen",
-        "code": "CPH",
-        "latitude": 55.677584411089505, 
-        "longitude": 12.568359375,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Berlin",
-        "code": "TXL",
-        "latitude": 52.50284765940397, 
-        "longitude": 13.392333984375,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Marrakech",
-        "code": "RAK",
-        "latitude": 31.50362930577303, 
-        "longitude": -7.998046875,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Cape Town",
-        "code": "CPT",
-        "latitude": -33.925129700071984, 
-        "longitude": 18.4130859375,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
         "city": "Kuala Lumpur, Malaysia",
         "code": "KUL",
-        "latitude": 3.118576216781991, 
-        "longitude": 101.66748046874999,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Beijing, China",
-        "code": "PEK",
-        "latitude": 39.87601941962116, 
-        "longitude": 116.45507812500001,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Tokyo, Japan",
-        "code": "HND",
-        "latitude": 35.668453708353404, 
-        "longitude": 139.77081298828125,
-      },
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Ho Chi Minh City, Japan",
-        "code": "SGN",
-        "latitude": 10.771928557041248, 
-        "longitude": 106.69921875,
+        "latitude": 3.1333, 
+        "longitude": 101.6833,
       },
     },
     {
@@ -405,19 +119,8 @@ latlongs = {
         "marker-size": "medium",
         "city": "Dubai, United Arab Emirates",
         "code": "DXB",
-        "latitude": 25.264568475331583, 
-        "longitude": 55.294189453125,
-      },
-    },
-     {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "city": "Istanbul, Turkey",
-        "code": "IST",
-        "latitude": 41.001666266518185, 
-        "longitude": 28.937988281249996,
+        "latitude": 25.2048, 
+        "longitude": 55.2708,
       },
     },
     {
@@ -425,10 +128,10 @@ latlongs = {
       "properties": {
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
-        "city": "Sydney, Australia",
-        "code": "SYD",
-        "latitude": -33.90689555128866, 
-        "longitude": 151.2158203125,
+        "city": "Phuket, Thailand",
+        "code": "HKT",
+        "latitude": 7.8900, 
+        "longitude": 98.3983,
       },
     },
     {
@@ -436,10 +139,10 @@ latlongs = {
       "properties": {
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
-        "city": "London, England",
-        "code": "LHR",
-        "latitude": 51.50639189133809, 
-        "longitude": -0.12462615966796874,
+        "city": "Denpasar, Bali, Indonesia",
+        "code": "DPS",
+        "latitude": -8.6500, 
+        "longitude": 115.2167,
       },
     }
   ]
