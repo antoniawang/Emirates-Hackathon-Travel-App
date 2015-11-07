@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Wanderlust</title>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css"/>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.css"/>
+<style type="text/css" src="static/index.css"></style>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite">
+    <style>
+      body {
+        font-family: 'Special Elite', serif;
+        font-size: 15px;
+      }
+      .navbar-brand:hover {
+    background-color: #ECEBEB;
+}
+
+    </style>
+          {% block head %}
+          {% endblock %}
+</head>
+<body> 
+<div class="navbar navbar-custom navbar-fluid-top">
+ <div class="navbar-header"><a class="navbar-brand" role="navigation " href="/">Welcome to Wanderlust</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span><div class="container"></div>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li><a href="/">Home</a></li>
+        {% if "user_id" in session %}
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        {% endif %}   
+        <li>&nbsp;</li>
+      </ul>
+</div>
+</div>    
+
+{% for flash in get_flashed_messages() %}
+      <div class="alert alert-info" style="width:90%; margin:0 auto;">{{ flash }}</div>
+{% endfor %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+</html>
+
+
