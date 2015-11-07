@@ -1,88 +1,6 @@
 airlines = {
-              'NK': 'Spirit Airlines',
-              'F9': 'Frontier Airlines',
-              'B6': 'JetBlue',
-              'US': 'US Airways',
-              'AS': 'Alaska Airlines',
-              'VX': 'Virgin America',
-              'HA': 'Hawaiian Airlines',
-              'UA': 'United Airlines',
-              'AF': 'Air France',
-              'NQ': 'Air Japan',
-              'NH': 'All Nippon Airways',
-              'AB': 'Air Berlin',
-              'AI': 'Air India',
-              'JM': 'Air Jamaica',
-              'AC': 'Air Canada',
-              'EI': 'Aer Lingus',
-              'AR': 'Aerolineas Argentinas',
-              'AM': 'Aeromexico',
-              'CA': 'Air China',
-              'AA': 'American Airlines',
-              'KL': 'Royal Dutch Airlines',
-              'VS': 'Virgin Atlantic',
-              'BA': 'British Airways',
-              'JL': 'Japan Airlines',
-              'MH': 'Malaysia Airlines',
-              'EY': 'Etihad Airways',
-              'WS': 'WestJet',
-              'AT': 'Royal Air Maroc',
-              'TP': 'TAP Portugal',
-              'TK': 'Turkish Airlines',
-              'IB': 'Iberia',
-              'SA': 'South African Airways',
-              'DL': 'Delta Airlines',
-              'LX': 'Swiss Airlines',
-              'SK': 'Scandinavian Airlines',
+              
               'EK': 'Emirates Airlines',
-              'CX': 'Cathay Pacific,',
-              'CI': 'China Airlines',
-              'DY': 'Norwegian Air',
-              'LA': 'LAN Airlines',
-              'MU': 'China Eastern Airlines',
-              'CZ': 'China Southern Airlines',
-              'AY': 'Finnair',
-              'VN': 'Vietnam Airlines',
-              'LY': 'El Al Israel Airlines',
-              'AZ': 'Alitalia',
-              'JM': 'Air Jamaica',
-              'NH': 'All Nippon Airways',
-              'JL': 'Japan Airlines',
-              'RJ': 'Royal Jordanian Airlines',
-              'KW': 'Korean Air',
-              'AM': 'Aeromexico',
-              'MX': 'Mexicana Airlines',
-              'NZ': 'Air New Zealand',
-              'PL': 'Aero Peru',
-              'PR': 'Philippine Air Lines',
-              'LO': 'Lot Polish Airlines',
-              'SU': 'Aeroflot',
-              'SQ': 'Singapore Airlines',
-              'IB': 'Iberia',
-              'TG': 'Thai Airways',
-              'LH': 'Lufthansa',
-              'OG': 'Go Fly Ltd.',
-              'OS': 'Austrian Airlines',
-              'QF': 'Qantas Airlines',
-              'AQ': 'Aloha Air',
-              'HP': 'America West Airlines',
-              'CO': 'Continental Airlines',
-              'YX': 'Midwest Express',
-              'NW': 'Northwest Airlines',
-              'WN': 'Southwest Airlines',
-              'FL': 'AirTran',
-              'VA': 'Virgin Australia',
-              'BR': 'EVA Airlines',
-              'HU': 'Hainian Airlines',
-              'SY': 'Sun Country Airlines',
-              'QR': 'Qatar Airways',
-              'KE': 'Korean Air',
-              'CM': 'Copa Airlines',
-              'FM': 'Shanghai Airlines',
-              'AV': 'Avianca Brazil Airlines',
-              'JJ': 'TAM Airlines',
-              '4M': 'LAN Argentina Airlines',
-              'OZ': 'Asiana Airlines'
               }
 
 
@@ -90,16 +8,15 @@ airlines = {
 
 
 
-
-
-
-
-
 cities = {  
+                            "DPS": "Denpasar, Bali, Indonesia",
+                            "HKT": "Phuket, Thailand", 
+                            "IAH": "Houston, Texas",
                             "ATL": "Atlanta, Georgia",
                             "BOS": "Boston, Massachusetts",
                             "ORD": "Chicago, Illinois",
                             "DFW": "Dallas, Texas ",
+                            "MCO": "Orlando, Florida",
                             "DEN": "Denver, Colorado",
                             "LAS": "Las Vegas, Nevada",
                             "LAX": "Los Angeles, California",
@@ -140,9 +57,18 @@ cities = {
                             "PHL": "Philadelphia, Pennsylvania",
                             "DAL": "Dallas, Texas",
                             "DCA": "Washington D.C."
+                            ""
                             }
 
+
+
+
+
 airports = {
+                            "DPS": "Ngurah Rai International Airport",
+                            "HKT": "Phuket International Airport", 
+                            "MCO": "Orlando International Airport",
+                            "IAH": "Houston Intercontinental Airport",
                             "ATL": "Hartsfield-Jackson Atlanta International Airport",
                             "BOS": "Boston Logan International Airport",
                             "ORD": "Chicago O'Hare International",
