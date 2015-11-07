@@ -3,7 +3,21 @@ airlines = {
               'EK': 'Emirates Airlines',
               }
 
+Boston
+Chicago
+Dallas
+Houston
+LA
+NYC
+Orlando
+SFO
+Seattle
+DC
 
+Bali
+Dubai
+Kuala Lumpur
+Phuket
 
 
 
@@ -12,52 +26,17 @@ cities = {
                             "DPS": "Denpasar, Bali, Indonesia",
                             "HKT": "Phuket, Thailand", 
                             "IAH": "Houston, Texas",
-                            "ATL": "Atlanta, Georgia",
                             "BOS": "Boston, Massachusetts",
                             "ORD": "Chicago, Illinois",
                             "DFW": "Dallas, Texas ",
                             "MCO": "Orlando, Florida",
-                            "DEN": "Denver, Colorado",
-                            "LAS": "Las Vegas, Nevada",
                             "LAX": "Los Angeles, California",
-                            "OGG": "Maui, Hawaii",
-                            "MIA": "Miami, Florida",
                             "JFK": "New York, New York",
-                            "PHX": "Phoenix, Arizona",
                             "SFO": "San Francisco, California",
                             "SEA": "Seattle, Washington ",
                             "IAD": "Washington D.C.",
-                            "EZE": "Buenos Aires, Argentina",
-                            "SYD": "Sydney, Australia",
-                            "GIG": "Rio de Janeiro, Brazil",
-                            "PEK": "Beijing, China",
-                            "CPH": "Cophenhagen, Denmark",
-                            "LHR": "London, England",
-                            "CDG": "Paris, France",
-                            "TXL": "Berlin, Germany",
-                            "DUB": "Dublin, Ireland",
-                            "FCO": "Rome, Italy",
-                            "MBJ": "Montego Bay, Jamaica",
-                            "HND": "Tokyo, Japan",
                             "KUL": "Kuala Lumpur, Malaysia",
-                            "CUN": "Cancun, Mexico",
-                            "YUL": "Montreal, Quebec, Canada",
-                            "RAK": "Marrakech, Morocco",
-                            "AMS": "Amsterdam, The Netherlands",
-                            "LIS": "Lisbon, Portugal",
-                            "SJU": "San Juan, Puerto Rico",
-                            "MAD": "Madrid, Spain",
-                            "CPT": "Cape Town, South Africa",
-                            "YYZ": "Toronto, Ontario, Canada",
-                            "IST": "Istanbul, Turkey",
                             "DXB": "Dubai, United Arab Emirates",
-                            "YVR": "Vancouver, British Columbia, Canada",
-                            "SGN": "Ho Chi Minh City, Vietnam",
-                            "CLT": "Charlotte, North Carolina",
-                            "PHL": "Philadelphia, Pennsylvania",
-                            "DAL": "Dallas, Texas",
-                            "DCA": "Washington D.C."
-                            ""
                             }
 
 
@@ -67,50 +46,16 @@ cities = {
 airports = {
                             "DPS": "Ngurah Rai International Airport",
                             "HKT": "Phuket International Airport", 
-                            "MCO": "Orlando International Airport",
                             "IAH": "Houston Intercontinental Airport",
-                            "ATL": "Hartsfield-Jackson Atlanta International Airport",
                             "BOS": "Boston Logan International Airport",
                             "ORD": "Chicago O'Hare International",
                             "DFW": "Dallas/Fort Worth International Airport",
-                            "DEN": "Denver International Airport",
-                            "LAS": "Las Vegas McCarran International Airport",
+                            "MCO": "Orlando International Airport",
                             "LAX": "Los Angeles International Airport",
-                            "OGG": "Kahului Airport",
-                            "MIA": "Miami International Airport",
                             "JFK": "John F. Kennedy International Airport",
-                            "PHX": "Phoenix Sky Harbor International Airport",
                             "SFO": "San Francisco International Airport",
                             "SEA": "Seattle-Tacoma International Airport",
                             "IAD": "Washington Dulles International Airport",
-                            "EZE": "Buenos Aires Ezeiza International Airport",
-                            "SYD": "Sydney Airport",
-                            "GIG": "Rio de Janeiro International Airport",
-                            "PEK": "Beijing Capital International Airport",
-                            "CPH": "Copenhagen Airport",
-                            "LHR": "London Heathrow Airport",
-                            "CDG": "Paris Charles De Gaulle Airport",
-                            "TXL": "Berlin Tegel Airport",
-                            "DUB": "Dublin Airport",
-                            "FCO": "Leonardo da Vinci International Airport",
-                            "MBJ": "Sangster International Airport",
-                            "HND": "Haneda Airport",
                             "KUL": "Kuala Lumpur International Airport",
-                            "CUN": "Cancun International Airport",
-                            "YUL": "Montreal Pierre Elliott Trudeau International Airport",
-                            "RAK": "Mohammed V International Airport",
-                            "AMS": "Amsterdam Airport Schiphol",
-                            "LIS": "Lisbon Portela Airport",
-                            "SJU": "San Juan Luis Munoz Marin International Airport",
-                            "MAD": "Madrid-Barajas Airport",
-                            "CPT": "Cape Town International Airport",
-                            "YYZ": "Toronto Pearson International Airport",
-                            "IST": "Istanbul Ataturk Airport",
-                            "DXB": "Dubai International Airport",
-                            "DWC": "Al Maktoum International Airport",
-                            "YVR": "Vancouver International Airport",
-                            "SGN": "Tan Son Nhat International Airport",
-                            "CLT": "Charlotte International Airport",
-                            "PHL": "Philadelphia International Airport",
-                            "DAL": "Dallas Love Field",
-                            "DCA": "Ronald Reagan Washington National Airport"}
+                            "DXB": "Dubai International Airport"
+                            }
