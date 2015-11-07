@@ -2,82 +2,82 @@
 {% block head %}
 {% endblock %}
 {% block content %}    
-    <div class="container-fluid">
-        <div class="row">
-            <div id="heading">
-                <h1>Welcome to Wanderlust!</h1>
-                <h3>To see where Wanderlust can take you<br>fill out the details below for you and your travel partner.</h3>
+<div class="container-fluid">
+    <div class="row">
+
+        <div id="heading">
+            <h1>Welcome to Wanderlust!</h1>
+            <h3>To see where Wanderlust can take you<br>fill out the details below for you and your travel partner.</h3>
+        </div>
+
+        <div class="col-md-4 col-md-offset-2"> 
+
+                <form action = "/search_results" method="POST">      
+                    <div>
+                        <label>Traveler #1 Name Origin City and Max Budget</label>
+                        <input value="Antonia Wang" type="text" name="traveler1_name" id="traveler1_name" class="form-control" placeholder="Traveler #1">
+                        <select class="form-control" name="traveler1_origin" id="traveler1_origin" required> 
+                            <ul class="dropdown-menu">   
+                                <li><option value="">Traveler #1's Departure City:</option></li>    
+                                <li><option value="BOS">Boston, Massachusetts</option></li>  
+                                <li><option value="ORD">Chicago, Illinois</option></li> 
+                                <li><option value="DFW">Dallas, Texas</option></li>  
+                                <li><option value="MCO">Orlando, Florida</option></li>  
+                                <li><option value="LAX">Los Angeles, California</option></li>     
+                                <li><option value="JFK">New York, New York</option></li>   
+                                <li><option value="SFO">San Francisco, California</option></li>
+                                <li><option value="SEA">Seattle, Washington</option></li> 
+                                <li><option value="IAD">Washington, DC</option></li>   
+                            </ul>
+                        </select>
+                        <input value="1200" type="number" name="traveler1_max_price" id="traveler1_max_price" class="form-control" placeholder="Traveler #1 Max Budget">
+                    </div>
+        </div>
+                     
+
+        <div class="col-md-4">
+                    <div>    
+                        <label>Traveler #2 Name, Origin City, and Max Budget</label>
+                        <input value="Rosy Sanchez" type="text" name="traveler2_name" id="traveler2_name" class="form-control" placeholder="Traveler #2">
+                        <select class="form-control" name="traveler2_origin" id="traveler2_origin" required> 
+                            <ul class="dropdown-menu">   
+                                <li><option value="">Traveler #2's Departure City:</option></li>    
+                                <li><option value="BOS">Boston, Massachusetts</option></li>  
+                                <li><option value="ORD">Chicago, Illinois</option></li> 
+                                <li><option value="DFW">Dallas, Texas</option></li>  
+                                <li><option value="MCO">Orlando, Florida</option></li>  
+                                <li><option value="LAX">Los Angeles, California</option></li>     
+                                <li><option value="JFK">New York, New York</option></li>   
+                                <li><option value="SFO">San Francisco, California</option></li>
+                                <li><option value="SEA">Seattle, Washington</option></li> 
+                                <li><option value="IAD">Washington, DC</option></li> 
+                            </ul>
+                        </select> 
+                        <input value="1500" type="number" name="traveler2_max_price" id="traveler2_max_price" class="form-control" placeholder="Traveler #2 Max Budget">
+                    </div>
+        </div>
+             
+
+
+        <div class="col-md-8 col-md-offset-2">
+            <div>
+                <label>Departure Date<input value="2016-01-08" type="date" name="departure_date" id="departure_date" class="form-control" required></label>
+                <label>Return Date<input value="2016-01-23" type="date" name="return_date" id="return_date" class="form-control" required></label>
             </div>
-            <div class="col-md-4 col-md-offset-4">
+        </div>
+        
+    </div>   <!-- div class="row" CLOSING DIV -->
 
-                <!-- <div class="form-group"> -->
-                    <form action = "/search_results" method="POST">      
-                        <div class="blue">
-                            <label>Traveler #1 Name Origin City and Max Budget</label>
-                            <input type="text" name="traveler1_name" id="traveler1_name" class="form-control" placeholder="Traveler #1">
-                            <select class="form-control" name="traveler1_origin" id="traveler1_origin" required> 
-                                <ul class="dropdown-menu">   
-                                    <li><option value="">Traveler #1's Departure City:</option></li>    
-                                    <li><option value="BOS">Boston, Massachusetts</option></li>  
-                                    <li><option value="ORD">Chicago, Illinois</option></li> 
-                                    <li><option value="DFW">Dallas, Texas</option></li>  
-                                    <li><option value="MCO">Orlando, Florida</option></li>  
-                                    <li><option value="LAX">Los Angeles, California</option></li>     
-                                    <li><option value="JFK">New York, New York</option></li>   
-                                    <li><option value="SFO">San Francisco, California</option></li>
-                                    <li><option value="SEA">Seattle, Washington</option></li> 
-                                    <li><option value="IAD">Washington, DC</option></li>   
-                                </ul>
-                            </select>
-                            <input type="number" name="traveler1_max_price" id="traveler1_max_price" class="form-control" placeholder="Traveler #1 Max Budget">
-                        </div>
-                            
+        
+    <button id="submit_button" name="destination" type="submit" value="DPS" class="btn-xlarge">Zen. Chill. Relax.</button>
+    <button id="submit_button" name="destination" type="submit" value="HKT" class="btn-xlarge">Fall. In. Love.</button> 
+    <button id="submit_button" name="destination" type="submit" value="KUL" class="btn-xlarge">Explore. Adventure.</button> 
+    <button id="submit_button" name="destination" type="submit" value="DXB" class="btn-xlarge">Cosmopolitan. Oasis.</button> 
+           
 
-                        <div class="blue">    
-                            <label>Traveler #2 Name, Origin City, and Max Budget</label>
-                            <input type="text" name="traveler2_name" id="traveler2_name" class="form-control" placeholder="Traveler #2">
-                            <select class="form-control" name="traveler2_origin" id="traveler2_origin" required> 
-                                <ul class="dropdown-menu">   
-                                    <li><option value="">Traveler #2's Departure City:</option></li>    
-                                    <li><option value="BOS">Boston, Massachusetts</option></li>  
-                                    <li><option value="ORD">Chicago, Illinois</option></li> 
-                                    <li><option value="DFW">Dallas, Texas</option></li>  
-                                    <li><option value="MCO">Orlando, Florida</option></li>  
-                                    <li><option value="LAX">Los Angeles, California</option></li>     
-                                    <li><option value="JFK">New York, New York</option></li>   
-                                    <li><option value="SFO">San Francisco, California</option></li>
-                                    <li><option value="SEA">Seattle, Washington</option></li> 
-                                    <li><option value="IAD">Washington, DC</option></li> 
-                                </ul>
-                            </select> 
-                            <input type="number" name="traveler2_max_price" id="traveler2_max_price" class="form-control" placeholder="Traveler #2 Max Budget">
-                        </div>
-                 
-            
-                         <div class="blue">    
-                            <label>Where Will Your Wanderlust Lead You Next?</label>
-                            <select class="form-control" name="destination" id="destination" required> 
-                                <ul class="dropdown-menu">   
-                                    <li><option value=""></option></li>    
-                                    <li><option value="DPS">Denpasar, Bali, Indonesia</option></li>    
-                                    <li><option value="HKT">Phuket, Thailand</option></li>  
-                                    <li><option value="KUL">Kuala Lumpur, Malaysia</option></li> 
-                                    <li><option value="DXB">Dubai, United Arab Emirates</option></li>  
-                                </ul>
-                            </select>         
-                        </div> 
+        </form>
 
-                        <div class="blue">
-                            <label>Departure Date<input value="2016-01-08" type="date" name="departure_date" id="departure_date" class="form-control" required></label>
-                            <label>Return Date<input value="2016-01-23" type="date" name="return_date" id="return_date" class="form-control" required></label>
-                        </div>
-            </div>       
-                        
-                        <input id="submit_button" type="submit" value="Ready. Set. Jet!" class="btn btn-info btn-lg"> 
-                    </form>
-                <!-- </div> -->
-            
-        </div> 
-    </div>
+
+</div> <!-- div class="container-fluid" CLOSING DIV -->
 
 {% endblock %}
