@@ -82,7 +82,7 @@ $.get('/map_cities.json', function (latlongs) {
         <b><p>Carrier: </b>{{alt1.inbound_airline_name}} flight #{{alt1.outbound_flight_number}}</p>
         <b><p>Departure Date & Time: </b>{{alt1.inbound_datetime_departure}}</p>
         <b><p>Arrival Date & Time: </b>{{alt1.inbound_datetime_arrival}}</p>
-        <h3><p><b>Total fare is ${{alt1.total_fare}}, including ${{alt1.taxes}} in taxes.</b></p></h3>
+        <h3><p><b>{{traveler1_name}}'s Total Fare is ${{alt1.total_fare}}, Including ${{alt1.taxes}} in Taxes.</b></p></h3>
       <hr>
 {% endif %}
       <div class="panel panel-default">
@@ -114,7 +114,7 @@ $.get('/map_cities.json', function (latlongs) {
         <b><p>Carrier: </b>{{alt2.inbound_airline_name}} flight #{{alt2.inbound_flight_number}}</p>
         <b><p>Departure Date & Time: </b>{{alt2.inbound_datetime_departure}}</p>
         <b><p>Arrival Date & Time: </b>{{alt2.inbound_datetime_arrival}}</p>
-        <h3><p><b>Total fare is ${{alt2.total_fare}}, including ${{alt2.taxes}} in taxes.</b></p></h3>
+        <h3><p><b>{{traveler2_name}}'s Total Fare is ${{alt2.total_fare}}, Including ${{alt2.taxes}} in Taxes.</b></p></h3>
       <hr>
       {% endif %}      
       <a href="/">Search Again</a>
