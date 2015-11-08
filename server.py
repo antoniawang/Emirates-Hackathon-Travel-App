@@ -179,7 +179,7 @@ def get_search():
     t1 = Flight.query.filter_by(outbound_city_origin=cities[traveler1_origin], inbound_city_origin=cities[destination]).filter(Flight.total_fare<=traveler1_max_price).first()
     alt1 = None
 
-    if not t1:
+    if not t1:   
         alt1 = Flight.query.filter_by(outbound_city_origin=cities[traveler1_origin], inbound_city_origin=cities[destination]).first()
 
     t2 = Flight.query.filter_by(outbound_city_origin=cities[traveler2_origin], inbound_city_origin=cities[destination]).filter(Flight.total_fare<=traveler2_max_price).first()
@@ -188,6 +188,18 @@ def get_search():
     if not t2:
         alt2 = Flight.query.filter_by(outbound_city_origin=cities[traveler2_origin], inbound_city_origin=cities[destination]).first()
 
+    print "t1 and t2 are", t1, t2
+
+    t1_remainder = traveler1_max_price - t1.total_fare
+    # else:
+    #     t1_remainder = traveler1_max_price - alt1.total_fare
+
+
+    t2_remainder = traveler1_max_price - t2.total_fare
+    # else:
+    #     t2_remainder = traveler1_max_price - alt2.total_fare
+
+    total_remainder = t1_remainder + t2_remainder    
 
     if user_id:
         search_request = Search(user_id=user_id, traveler1_name=traveler1_name, traveler2_name=traveler2_name, traveler1_origin=traveler1_origin, traveler2_origin=traveler2_origin, traveler1_max_price=traveler1_max_price, traveler2_max_price=traveler2_max_price, departure_date=departure_date, return_date=return_date, destination=destination)
@@ -201,9 +213,11 @@ def get_search():
         print search_request_id.user_id
         print "&"*100
 
-        return render_template("search_results.html", search_request=search_request, search_request_id=search_request_id, t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name)
+        airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date, total_remainder)    
+        return render_template("search_results.html", search_request=search_request, search_request_id=search_request_id, t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
 
-    airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date)
+    airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date, total_remainder)
+    print "airbnb link is", airbnb_link,  "################"
     return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
 
 

@@ -86,7 +86,7 @@ $.get('/map_cities.json', function (latlongs) {
         <b><p>Carrier: </b>{{t1.inbound_airline_name}} flight #{{t1.outbound_flight_number}}</p>
         <b><p>Departure Date & Time: </b>{{t1.inbound_datetime_departure}}</p>
         <b><p>Arrival Date & Time: </b>{{t1.inbound_datetime_arrival}}</p>
-        <h3><p><b>Total fare is ${{t1.total_fare}}, including ${{t1.taxes}} in taxes.</b></p></h3>
+        <h3><p><b>{{traveler1_name}}'s Total fare is ${{t1.total_fare}}, including ${{t1.taxes}} in taxes.</b></p></h3>
 {% elif alt1 %}
     <h4>Emirates Adventures couldn't find a flight within {{traveler1_name}}'s budget, here's the next best option:</h4>
       <h4>{{traveler1_name}}'s Departing Flight Info ({{alt1.outbound_city_origin}} to {{alt1.outbound_city_final_destination}}):</h4>
