@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Xola &amp; Google Maps Mashup</title>
+    <link rel="stylesheet" href="../static/css/style_xolamap.css"/>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,600,700" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script type='text/javascript'>
+        var rootDomain = 'https://dev.xola.com';
+        var rootImageDomain = 'http://dev.xola.com';
+        var apiKey = 'syBwNtxaFwhGUMtpj7HkMmTJBMiNW7VYNks3F_Kms50'; // Insert your apiKey
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+        // this has globals. don't use globals unless you're lazy or hacking something together in an hour or so
+        var map;    // this is your map reference
+        var markerImg = {
+            'River Rafting' : 'waterpark',
+            'Trekking / Hiking' : 'hiking',
+            'Kayaking & Canoeing' : 'kayaking',
+            'Fly Fishing' : 'fishing',
+            'Food & Wine' : 'restaurant',
+            "Sailing" : 'sailing',
+            'Cycling & Mountain Biking' : 'cycling',
+            "Deep Sea Fishing": 'deepseafishing',
+            "Guide School": 'walkingtour',
+            "River Tubing ": '',
+            "Safety Training": '',
+            "Team Building": '',
+            "Bungee Jumping": '',
+            "Caving / Spelunking": 'spelunking',
+            "River Cruises": 'cruiseship',
+            "Skydiving": 'diving',
+            "Surfing": 'surfing',
+            "Website Creation": '',
+            "Lake Fishing": 'fishing',
+            "Parachuting": 'paragliding',
+            "Paragliding": 'paragliding',
+            "Mountaineering": 'mountains',
+            "Aerial Tours": 'helicopter',
+            "Creative Classes": '',
+            "Snowshoeing": 'snowshoeing',
+            "Windsurfing & Kitesurfing": 'kitesurfing',
+            "Art & Architecture": '',
+            "Birdwatching": 'birds-2',
+            "Hang Gliding ": 'hanggliding',
+            "Wilderness Training": '',
+            "Ballooning": 'hotairbaloon',
+            "Walking Tours": 'walkingtour',
+            "Backpacking/Camping": 'camping-2',
+            "Culture & History": '',
+            "Eco-Tour/Hike": '',
+            "Marine Wildlife": '',
+            "Snowmobiling": 'snowmobiling',
+            "Wakeboarding": 'boardercross',
+            "Zip-lining": 'ziplining',
+            "Beer Tour": 'beergarden',
+            "Photography": 'photography',
+            "Snowkiting": 'snowboarding',
+            "Stand Up Paddle (SUP)": 'surfpaddle',
+            "Off-road": 'atv',
+            "Helicopter Tours": 'helicopter',
+            "Horseback Riding": 'horseriding',
+            "Rock Climbing": 'climbing'
+        };
+    </script>
+
+
+    <script>
+
+        function experienceIsMappable(experience) {
+            return 'photo' in experience && 'geo' in experience && experience.complete == true;
+        }
+
+        function markerClickListener(marker) {
+            console.log(marker);
+        }
+
+        function plotExperience(experience) {
+            // doesn't work yet
+            if (!experienceIsMappable(experience)) {
+                return;
+            }
+
+            var expCategory = experience.category.trim();
+            var currentMarkerImg = markerImg[expCategory] ? markerImg[expCategory] : 'blank';
+            currentMarkerImg = '../static/img/markers/' + currentMarkerImg + '.png';
+            var marker = new google.maps.Marker({
+                map: map,
+                experience: experience,
+                exploreView: null,
+                icon: currentMarkerImg,
+                position: new google.maps.LatLng(experience.geo.lat, experience.geo.lng),
+                title: experience.name,
+                descr : experience.excerpt,
+                id : experience.id
+            })
+
+            var cacheImg = rootImageDomain + '/experiences/' + experience.id + '/medias/' + experience.photo.id + '?width=260&height=200';
+            var markerTmpl =  '<div class="marker-wrapper">'+
+                                '<h3>'+experience.name+'</h3>'+
+                                '<p class="excerpt">'+experience.excerpt+'</p>'+
+                                '<div class="desc-wrapper">'+
+                                    '<img src='+cacheImg+' height="200" width="260" class="desc-img"/>'+
+                                '</div>'+
+                                '<div class="misc">'+
+                                    '<div class="lhs">'+
+                                        '<p>Price: $'+experience.price+'</p>'+
+                                        '<p>Category: '+experience.category+'</p>'+
+                                    '</div>'+
+                                    '<div class="rhs">'+
+                                        '<div name="xola-checkout" class="xola-custom" id='+experience.id+'>Book Now</div>'+
+                                    '</div>'+
+                                    '<div class="clear"></div>'+
+                                '</div>'+
+                            '</div>';
+
+            marker.InfoWindow = new google.maps.InfoWindow({
+                content: markerTmpl
+            });
+            marker.addListener('click', function() {
+                marker.InfoWindow.open(map, marker)
+            });
+
+            // // When you click the close button on the marker, hide info window
+            google.maps.event.addListener(marker.InfoWindow, 'closeclick', function() {
+                // self.hide_info.call(marker);
+            });
+
+            return marker;
+        }
+
+        function plotMarkers(markerObjectList) {
+            // plot each marker we get
+            markerObjectList.forEach( function(marker) {
+                // doesn't work yet
+                plotExperience(marker);
+            });
+        }
+
+        function getAndPlotExperiences(lat, lng, limit) {
+
+            var baseUrl = rootDomain + '/api/experiences';
+            $.get(baseUrl, {
+                limit: limit,
+                geo: lat+','+lng,
+                apiKey: apiKey
+            }).success(function(result) {
+                plotMarkers(result.data);
+            }).fail(function() {
+                console.log("Error");
+            })
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="map-canvas"></div>
+        <div id="explore-wrapper">
+            <div id="large-img"></div>
+            <!-- Will contain the bottom panel to browse photos -->
+            <section id="explore"></section>
+        </div>
+    </div>
+
+    <script type="text/template" id="markerInfo">
+        <div class="marker-wrapper">
+            <h3><%= name %></h3>
+            <p class='excerpt'><%= excerpt %></p>
+            <div class='desc-wrapper'>
+                <img src='<%= cacheImg %>' height='200' width='260' class='desc-img' />
+                <p class='desc'><%= desc %></p>
+            </div>
+            <div class='misc'>
+                <div class='lhs'>
+                    <p>Price: $<%= price %></p>
+                    <p>Category: <%= category %></p>
+                </div>
+                <div class='rhs'>
+                    <div name="xola-checkout" class="xola-custom" id="<%= id %>">Book Now</div>
+                </div>
+                <div class='clear'></div>
+            </div>
+        </div>
+    </script>
+
+    <script>
+        $( document ).ready( function() {
+            var mapContainer = $("#map-canvas")[0];
+            // render the map
+            map = new google.maps.Map(mapContainer, {
+                center: {lat: 37.7833, lng: -122.4167},
+                scrollwheel: true,
+                zoom: 10
+            });
+
+            // find some shit nearby and plot it
+            var resp = getAndPlotExperiences(37.7833, -122.4167, 20)
+        });
+    </script>
+
+
+    <script type="text/javascript">
+    (function() {
+    var co = document.createElement('script');
+    co.type = 'text/javascript';
+    co.async = true;
+    co.src = rootDomain + '/checkout.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(co, s);
+    })();
+    </script>
+</body>
+</html>
