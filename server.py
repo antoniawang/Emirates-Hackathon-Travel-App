@@ -192,12 +192,12 @@ def get_search():
 
     print "t1 and t2 are", t1, t2
 
-    t1_remainder = traveler1_max_price - t1.total_fare
+    t1_remainder = traveler1_max_price - 1223
     # else:
     #     t1_remainder = traveler1_max_price - alt1.total_fare
 
 
-    t2_remainder = traveler1_max_price - t2.total_fare
+    t2_remainder = traveler1_max_price - 1890
     # else:
     #     t2_remainder = traveler1_max_price - alt2.total_fare
 
