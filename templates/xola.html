@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,13 +197,13 @@
             var mapContainer = $("#map-canvas")[0];
             // render the map
             map = new google.maps.Map(mapContainer, {
-                center: {lat: 40.730088145502236, lng: -73.99188995361328},
+                center: {lat: {{ lat }}, lng: {{ lng }}},
                 scrollwheel: true,
                 zoom: 3
             });
 
             // find some shit nearby and plot it
-            var resp = getAndPlotExperiences(40.730088145502236, -73.99188995361328, 5000)
+            var resp = getAndPlotExperiences({{ lat }}, {{ lng }}, 100)
         });
     </script>
 
@@ -218,3 +220,4 @@
     </script>
 </body>
 </html>
+{% endblock %}

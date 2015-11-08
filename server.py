@@ -177,6 +177,7 @@ def get_search():
     destination = request.form["destination"]
     session['destination'] = destination
 
+
     t1 = Flight.query.filter_by(outbound_city_origin=cities[traveler1_origin], inbound_city_origin=cities[destination]).filter(Flight.total_fare<=traveler1_max_price).first()
     alt1 = None
 
@@ -225,7 +226,16 @@ def get_search():
 def display_xola_map():
     destination = session.get('destination')
 
-    return render_template("xola.html", destination=destination)
+    for place in latlongs['features']:
+        if place['properties'] == destination:
+            session['latitude'] = destination['properties']['latitude']
+            session['longitude'] = destination['properties']['longitude']
+
+    lat = session.get('latitude')
+    lng = session.get('longitude')
+    
+    return render_template("xola.html", destination=destination, lat=lat, lng=lng)
+
 
 if __name__ == "__main__":
     app.debug = True
