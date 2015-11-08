@@ -16,8 +16,8 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script>
-        // this has globals. don't use globals unless you're lazy or hacking something together in an hour or so
-        var map;    // this is your map reference
+
+        var map;    
         var markerImg = {
             'River Rafting' : 'waterpark',
             'Trekking / Hiking' : 'hiking',
@@ -195,13 +195,13 @@
             var mapContainer = $("#map-canvas")[0];
             // render the map
             map = new google.maps.Map(mapContainer, {
-                center: {lat: 37.7833, lng: -122.4167},
+                center: {lat: 40.730088145502236, lng: -73.99188995361328},
                 scrollwheel: true,
-                zoom: 10
+                zoom: 3
             });
 
             // find some shit nearby and plot it
-            var resp = getAndPlotExperiences(37.7833, -122.4167, 20)
+            var resp = getAndPlotExperiences(40.730088145502236, -73.99188995361328, 5000)
         });
     </script>
 
