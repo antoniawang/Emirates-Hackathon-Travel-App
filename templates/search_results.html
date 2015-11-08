@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<style>
+      #map-canvas {
+        width: 25em;
+        height: 75em;
+      }
+</style>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -41,11 +46,9 @@ $.get('/map_cities.json', function (latlongs) {
           }
 </script>
 
-
-
 <div class="container-fluid" id="main">
   <div class="row">
-    <div class="col-md-12" id="left">
+    <div class="col-md-8" id="left">
     
       <h2>Search Results</h2> 
       
@@ -114,11 +117,8 @@ $.get('/map_cities.json', function (latlongs) {
         <h3><p><b>{{traveler2_name}}'s Total Fare is ${{alt2.total_fare}}, Including ${{alt2.taxes}} in Taxes.</b></p></h3>
       <hr>
       {% endif %}      
-
-      <div id="map-canvas"></div>
+      <a href="/">Search Again</a>
       </p>
-
-
       {% if session.get("user_id") %}
       <hr>  
       <form action="/saved_searches" method="POST">
@@ -137,21 +137,16 @@ $.get('/map_cities.json', function (latlongs) {
       </form>
       {% endif %}
       <hr> 
-
-
       <div>
-        <a href='{{ airbnb_link }}' button type="button" class="btn btn-lg">take me AirBnB</a> 
+        <a href='{{ airbnb_link }}' button type="button" class="btn btn-primary">take me AirBnB</a> 
         <p> test paragraph </p>
       </div>
     </div>
 
-    
+    <div class="col-lg-4">
+    <div id="map-canvas"></div>
     </div> 
 
-<a href="/">Search Again</a>
   </div>
-
-
-
 </div>
 {% endblock %}
