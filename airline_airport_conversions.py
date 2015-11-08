@@ -18,7 +18,8 @@ cities = {
                             "DPS": "Denpasar, Bali, Indonesia",
                             "HKT": "Phuket, Thailand", 
                             "KUL": "Kuala Lumpur, Malaysia",
-                            "DXB": "Dubai, United Arab Emirates"
+                            "DXB": "Dubai, United Arab Emirates",
+                            "BOM": "Mumbai, India"
                             }
 
 
@@ -38,5 +39,6 @@ airports = {
                             "DPS": "Ngurah Rai International Airport",
                             "HKT": "Phuket International Airport", 
                             "KUL": "Kuala Lumpur International Airport",
-                            "DXB": "Dubai International Airport"
+                            "DXB": "Dubai International Airport",
+                            "BOM": "Chhatrapati Shivaji International Airport"
                             }
