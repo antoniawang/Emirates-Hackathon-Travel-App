@@ -13,6 +13,3 @@ def create_airbnb_url(city, checkin, checkout):
     airbnb_url = "https://www.airbnb.com/s/" + city_encode + "?guests=2&checkin="+checkin_encode+"&checkout=" + checkout_encode
 
     return airbnb_url
-
-print create_airbnb_url("Dubai, United Arab Emirates", "2016-01-23 09:30", "2016-01-24 08:15")
-print create_airbnb_url("San Francisco, California", "2016-01-23 09:30", "2016-01-24 08:15")
