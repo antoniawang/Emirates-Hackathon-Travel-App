@@ -203,8 +203,8 @@ def get_search():
 
         return render_template("search_results.html", search_request=search_request, search_request_id=search_request_id, t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name)
 
-    # airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date)
-    # return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
+    airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date)
+    return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
 
 
 if __name__ == "__main__":

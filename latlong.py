@@ -41,8 +41,8 @@ latlongs = {
         "marker-size": "medium",
         "city": "Los Angeles, California",
         "code": "LAX",
-        "latitude": 34.04697021261827, 
-        "longitude": -118.22662353515624,
+        "latitude": 34.0500, 
+        "longitude": -118.2500,
       },
     },
     {
@@ -121,6 +121,17 @@ latlongs = {
         "code": "DXB",
         "latitude": 25.2048, 
         "longitude": 55.2708,
+      },
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "city": "Mumbai, India",
+        "code": "BOM",
+        "latitude": 18.9750, 
+        "longitude": 72.8258,
       },
     },
     {
