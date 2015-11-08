@@ -162,7 +162,7 @@ $.get('/map_cities.json', function (latlongs) {
         <input type="hidden" name="alt2_flight_id" value="{{alt2.flight_id}}">
         {% endif %}
         <input type="hidden" name="search_id" value="{{search_request_id.search_id}}">
-        <input type="submit" class="center-block btn btn-info" value="Add These Results to Your Account Search History">
+        <!-- <input type="submit" class="center-block btn btn-info" value="Add These Results to Your Account Search History"> -->
       </form>
       {% endif %}
       <hr> 
@@ -178,13 +178,13 @@ $.get('/map_cities.json', function (latlongs) {
         <button><a href='{{ airbnb_link }}' target="_blank" class="btn-large">View AirBnB Accomodations in {{alt1.outbound_city_final_destination}}!</a></button>
       </div>
     {% endif %}
-        <center><button><a href='{{ airbnb_link }}' target="_blank" class="btn-xlarge">View Accomodations on AirBnB!</a></button></center>
-        <a href="/xola-map" id="xola-btn" class="btn-xlarge" target='_blank'>Find Excursions!</a>
+        <!-- <center><button><a href='{{ airbnb_link }}' target="_blank" class="btn-xlarge">View Accomodations on AirBnB!</a></button></center> --><br>
+        <button><a href="/xola-map" id="xola-btn" class="btn-large" target='_blank'>Find Excursions!</a></button>
     </div>
 
-<!--     <div class="col-lg-4">
+    <div class="col-lg-4">
     <div id="map-canvas"></div>
-    </div>  -->
+    </div> 
 
   </div>
 </div>
