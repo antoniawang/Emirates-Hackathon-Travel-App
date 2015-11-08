@@ -1,10 +1,37 @@
 
+body {
+  height: 100%;
+    width: 100%;
+    background:url("/static/img/clouds.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*position: fixed;*/
+}
 .dropdown-menu li{
    font-family:'Special Elite' serif;
    font-size:16px;
 }
 
+body {
 
+    color: red !important;
+
+}
+
+#heading {
+    color: black !important;
+}
+
+#red {
+    color: red !important;
+}
+/*
 html, body {
     background: black;
     background-size: cover;
@@ -20,7 +47,7 @@ html, body {
     -o-background-size: cover;
     color: black !important;
 
-}
+}*/
 
 .site-wrapper {
     display: table;
@@ -121,9 +148,19 @@ footer {
     width: 100%;   /*equired because fixed position */
 }
 
+.btn-large {
+    padding: 18px 28px;
+    color: red;
+    font-size: 25px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
+
 .btn-xlarge {
     padding: 18px 28px;
-    font-size: 70px;
+    font-size: 50px;
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
