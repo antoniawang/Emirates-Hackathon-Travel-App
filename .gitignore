@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 Hackbright_Flight_Project_Key.json
 env
 *.pyc
 lib
 requests
 key.py
+=======
+*.pyc
+env/*
+*.db
+servercopy.py
+>>>>>>> d85ab48ce4cb913d727a52ef28b5b8666c1e1965

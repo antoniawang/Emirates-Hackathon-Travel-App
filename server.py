@@ -4,6 +4,7 @@ from jinja2 import StrictUndefined
 from model import connect_to_db, db, User, Search, Flight, SavedSearch
 from airline_airport_conversions import airlines, cities, airports
 from latlong import latlongs
+from utils import create_airbnb_url
 
 
 app = Flask(__name__)
@@ -202,8 +203,8 @@ def get_search():
 
         return render_template("search_results.html", search_request=search_request, search_request_id=search_request_id, t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name)
 
-
-    return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name)
+    airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date)
+    return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
 
 
 if __name__ == "__main__":
