@@ -62,6 +62,17 @@ $.get('/map_cities.json', function (latlongs) {
             };
           });
           }
+
+      // $(document).ready(function() {
+      //     $("#xola-btn").click(function() {
+      // // Display 
+      //         $.get("/xola-map").done(function(results) {
+      //             var contents = results;
+      //             $("#contents").html(contents);
+      //         });   
+      //     });
+      // });
+
 </script>
 
 <div class="container-fluid" id="main">
@@ -167,11 +178,13 @@ $.get('/map_cities.json', function (latlongs) {
         <button><a href='{{ airbnb_link }}' target="_blank" class="btn-large">View AirBnB Accomodations in {{alt1.outbound_city_final_destination}}!</a></button>
       </div>
     {% endif %}
+        <center><button><a href='{{ airbnb_link }}' target="_blank" class="btn-xlarge">View Accomodations on AirBnB!</a></button></center>
+        <a href="/xola-map" id="xola-btn" class="btn-xlarge" target='_blank'>Find Excursions!</a>
     </div>
 
-    <div class="col-lg-4">
+<!--     <div class="col-lg-4">
     <div id="map-canvas"></div>
-    </div> 
+    </div>  -->
 
   </div>
 </div>

@@ -175,6 +175,8 @@ def get_search():
     departure_date = request.form["departure_date"]
     return_date = request.form["return_date"]
     destination = request.form["destination"]
+    session['destination'] = destination
+
 
     t1 = Flight.query.filter_by(outbound_city_origin=cities[traveler1_origin], inbound_city_origin=cities[destination]).filter(Flight.total_fare<=traveler1_max_price).first()
     alt1 = None
@@ -219,6 +221,23 @@ def get_search():
     airbnb_link = create_airbnb_url(cities[destination], departure_date, return_date, total_remainder)
     print "airbnb link is", airbnb_link,  "################"
     return render_template("search_results.html", t1=t1, t2=t2, alt1=alt1, alt2=alt2, destination=destination, traveler1_name=traveler1_name, traveler2_name=traveler2_name, airbnb_link=airbnb_link)
+
+@app.route('/xola-map', methods=['GET'])
+def display_xola_map():
+    destination = session.get('destination')
+    print "destination is", destination
+    print latlongs['features']
+    for place in latlongs['features']:
+        if place['properties']['code'] == destination:
+            session['latitude'] = place['properties']['latitude']
+            session['longitude'] = place['properties']['longitude']
+
+    lat = session.get('latitude')
+    lng = session.get('longitude')
+    print "lat lng is", lat, lng
+
+
+    return render_template("xola.html", destination=destination, lat=lat, lng=lng)
 
 
 if __name__ == "__main__":
