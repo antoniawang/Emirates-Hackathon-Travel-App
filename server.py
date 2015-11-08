@@ -225,15 +225,18 @@ def get_search():
 @app.route('/xola-map', methods=['GET'])
 def display_xola_map():
     destination = session.get('destination')
-
+    print "destination is", destination
+    print latlongs['features']
     for place in latlongs['features']:
-        if place['properties'] == destination:
-            session['latitude'] = destination['properties']['latitude']
-            session['longitude'] = destination['properties']['longitude']
+        if place['properties']['code'] == destination:
+            session['latitude'] = place['properties']['latitude']
+            session['longitude'] = place['properties']['longitude']
 
     lat = session.get('latitude')
     lng = session.get('longitude')
-    
+    print "lat lng is", lat, lng
+
+
     return render_template("xola.html", destination=destination, lat=lat, lng=lng)
 
 

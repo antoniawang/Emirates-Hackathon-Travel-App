@@ -1,5 +1,3 @@
-{% extends 'base.html' %}
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,7 +197,7 @@
             map = new google.maps.Map(mapContainer, {
                 center: {lat: {{ lat }}, lng: {{ lng }}},
                 scrollwheel: true,
-                zoom: 3
+                zoom: 12
             });
 
             // find some shit nearby and plot it
@@ -220,4 +218,3 @@
     </script>
 </body>
 </html>
-{% endblock %}
